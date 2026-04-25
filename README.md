@@ -102,3 +102,7 @@ dist\WindroseSaveRepairTool.exe
 - Backups are intentionally created outside the live `Players` folder.
 - The tool is aimed at progression-data recovery, not every possible kind of corrupted save.
 - Helper scripts in this repository are included for research and debugging. The main end-user workflow is the GUI executable.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
