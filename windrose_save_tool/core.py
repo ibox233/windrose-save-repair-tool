@@ -250,7 +250,7 @@ def normalize_optional_u32(value: int | str | None, label_zh: str, label_en: str
     except (TypeError, ValueError) as exc:
         raise ValueError(
             bi(
-                f"{label_zh}\u5fc5\u987b\u662f 0 \u5230 {UINT32_MAX} \u4e4b\u95f4\u7684\u6574\u6570\u3002",
+                f"{label_zh}必须是 0 到 {UINT32_MAX} 之间的整数。",
                 f"{label_en} must be an integer between 0 and {UINT32_MAX}.",
             )
         ) from exc
@@ -258,7 +258,7 @@ def normalize_optional_u32(value: int | str | None, label_zh: str, label_en: str
     if normalized < 0 or normalized > UINT32_MAX:
         raise ValueError(
             bi(
-                f"{label_zh}\u5fc5\u987b\u662f 0 \u5230 {UINT32_MAX} \u4e4b\u95f4\u7684\u6574\u6570\u3002",
+                f"{label_zh}必须是 0 到 {UINT32_MAX} 之间的整数。",
                 f"{label_en} must be an integer between 0 and {UINT32_MAX}.",
             )
         )
@@ -267,15 +267,15 @@ def normalize_optional_u32(value: int | str | None, label_zh: str, label_en: str
 
 
 def normalize_custom_total_exp(value: int | str | None) -> int | None:
-    return normalize_optional_u32(value, "\u81ea\u5b9a\u4e49\u603b\u7ecf\u9a8c", "Custom total XP")
+    return normalize_optional_u32(value, "自定义总经验", "Custom total XP")
 
 
 def normalize_custom_stat_points(value: int | str | None) -> int | None:
-    return normalize_optional_u32(value, "\u81ea\u5b9a\u4e49\u5c5e\u6027\u70b9", "Custom stat points")
+    return normalize_optional_u32(value, "自定义属性点", "Custom stat points")
 
 
 def normalize_custom_talent_points(value: int | str | None) -> int | None:
-    return normalize_optional_u32(value, "\u81ea\u5b9a\u4e49\u5929\u8d4b\u70b9", "Custom talent points")
+    return normalize_optional_u32(value, "自定义天赋点", "Custom talent points")
 
 
 def get_default_save_roots() -> list[Path]:
