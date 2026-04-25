@@ -42,8 +42,6 @@ The tool does not rebuild the whole save from scratch. It edits only the support
 - `repair_r5_save_progression.py`: console-oriented launcher
 - `WindroseSaveRepairTool.spec`: PyInstaller build definition
 - `build_windrose_save_repair_exe.ps1`: convenience build script
-- `inspect_r5_rocksdb.py`: read-only low-level inspection helper
-- `rebind_windrose_save_owner.py`: experimental ownership-rebinding helper
 
 ## Dependencies
 
