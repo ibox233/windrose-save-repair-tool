@@ -1,0 +1,31 @@
+# Build output
+build/
+dist/
+
+# Local documents / helper experiments that should stay out of the public repo
+DebugPkg2.spec
+NexusMods_Description_CN.md
+NexusMods_Description_CN_BBCode.txt
+inspect_r5_rocksdb.py
+rebind_windrose_save_owner.py
+
+# Python cache / local env noise
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local scratch and reverse-engineering output
+.tmp_*/
+.tmp_pydeps/
+.tmp_rebind_test/
+.tmp_restore_probe/
+.tmp_restore_probe.rewrite_*/
+
+# Logs
+*.log
+WindroseSaveRepairTool-error.log
+
+.gitignore
+logo.ico
+logo.png
